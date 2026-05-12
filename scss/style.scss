@@ -1,0 +1,83 @@
+@use "sass:math";
+
+// Reset
+@import "reset.scss";
+
+// Fonts
+
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap");
+@import "_mixin.scss";
+@import "variables.scss";
+
+/* Base styles */
+html,
+body {
+	height: 100%;
+}
+
+body {
+	font-family: "Montserrat", sans-serif;
+	font-size: toRem(16);
+	line-height: 1.5;
+	color: var(--white-color);
+	background: var(--bg-color);
+
+	.menu-open & {
+		overflow: hidden;
+	}
+}
+
+* {
+	transition:
+		background-color 0.4s,
+		color 0.4s,
+		border-color 0.4s;
+}
+
+#theme-switcher {
+	position: relative;
+	z-index: 5;
+	width: toRem(29);
+	height: toRem(29);
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#theme-switcher img:last-child {
+	display: none;
+}
+
+.lightmode #theme-switcher img:first-child {
+	display: none;
+}
+
+.lightmode #theme-switcher img:last-child {
+	display: block;
+}
+
+/* Sticky footer */
+.wrapper {
+	min-height: 100%;
+	overflow: clip;
+
+	display: flex;
+	flex-direction: column;
+}
+
+.wrapper > main {
+	flex: 1 1 auto;
+}
+
+/* Container */
+[class*="__container"] {
+	max-width: toRem(1526);
+	margin: 0 auto;
+	padding-inline: toRem(15);
+}
+@import "_components.scss";
+@import "_header.scss";
+@import "_hero.scss";
+@import "_recent.scss";
+@import "_contribution.scss";
+@import "_footer.scss";

@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<style>
+			html:not(.loaded) body {
+				overflow: hidden;
+			}
+
+			.loader {
+				position: fixed;
+				inset: 0;
+
+				background-color: #050607;
+				z-index: 101;
+
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				transition: opacity 0.5s, visibility 0.5s;
+			}
+
+			.loader.hidden {
+				opacity: 0;
+				visibility: hidden;
+				pointer-events: none;
+			}
+
+			.box {
+				position: relative;
+
+			}
+
+			.box::before {
+				content: "";
+				position: absolute;
+				inset: -12px;
+				border-radius: 50%;
+
+				background: conic-gradient(from 0deg,
+						transparent 0%,
+						#ffcd74 20%,
+						#bf841a 40%,
+						transparent 60%);
+
+				mask: radial-gradient(circle, transparent 60%, black 61%);
+				-webkit-mask: radial-gradient(circle, transparent 60%, black 61%);
+
+				animation: animatesurface 1s linear infinite;
+			}
+
+			.box img {
+				position: relative;
+				z-index: 2;
+			}
+
+			@keyframes animatesurface {
+				0% {
+					transform: rotate(0deg);
+				}
+
+				100% {
+					transform: rotate(360deg);
+				}
+			}
+		</style>
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+		/>
+		<link rel="stylesheet" href="css/style.css" />
+		<title>Orpheus</title>
+	</head>
+
+	<body>
+		<div class="loader" id="preloader">
+			<div class="container">
+				<div class="box">
+					<img src="img/preloader.svg" alt="preloader" />
+				</div>
+			</div>
+		</div>
+
+		<div class="wrapper">
+			<header class="header">
+				<div class="header__container">
+					<a href="#" class="header__logo">
+						<img src="img/logo.svg" alt="" />
+						<img src="img/logo-light.svg" alt="" />
+					</a>
+					<div class="header__menu menu">
+						<button type="button" class="menu__icon icon-menu">
+							<span></span>
+						</button>
+						<nav class="menu__body">
+							<div class="menu__wrapper-list">
+								<ul class="menu__list">
+									<li class="menu__item">
+										<a href="#" class="menu__link">Works</a>
+									</li>
+									<li class="menu__item">
+										<a href="#" class="menu__link">Contribution</a>
+									</li>
+									<li class="menu__item">
+										<a href="#" class="menu__link">Community</a>
+									</li>
+									<li class="menu__item">
+										<a href="#" class="menu__link">Get in Touch</a>
+									</li>
+								</ul>
+							</div>
+						</nav>
+						<button id="theme-switcher">
+							<img src="img/icons/Sun.svg" alt="" />
+							<img src="img/icons/moon.svg" alt="" />
+						</button>
+					</div>
+				</div>
+			</header>
+
+			<main class="page">
+				<section class="hero">
+					<div class="hero__container">
+						<div class="hero__content">
+							<h1 class="hero__title">
+								Yet the story of
+								<span>Orpheus</span>
+							</h1>
+							<div class="hero__text">
+								<p>
+									Product & Graphic Designer, with experience in
+									delivering end-to-end UX/UI design for software
+									products.
+								</p>
+							</div>
+							<div class="hero__actions">
+								<button class="hero__button button-transparent">
+									<span>Works</span>
+								</button>
+								<button class="hero__button button">
+									<span>Free Stuff</span>
+								</button>
+							</div>
+						</div>
+
+						<div class="hero__media">
+							<div class="hero__bg">
+								<img
+									src="img/hero-media-dark.png"
+									alt=""
+									class="hero__image hero__image--dark"
+								/>
+
+								<img
+									src="img/hero-media-light.png"
+									alt=""
+									class="hero__image hero__image--light"
+								/>
+							</div>
+
+							<!-- <img src="img/hero-decor.png" alt="" class="hero__decor" /> -->
+						</div>
+					</div>
+				</section>
+
+				<section id="recent" class="recent">
+					<div class="recent__container">
+						<div class="recent__header section__header">
+							<h2 class="section__title">Recent</h2>
+							<a href="#" class="section__link">View More</a>
+						</div>
+						<div class="recent__body swiper">
+							<div class="recent__sliders swiper-wrapper ">
+								<div class="recent__item item-recent swiper-slide">
+									<div class="item-recent__frame">
+										<div class="item-recent__media">
+											<div class="item-recent__media-inner">
+												<img src="img/recent-media.jpg" alt="" />
+											</div>
+										</div>
+										<div class="item-recent__content">
+											<h3 class="item-recent__title">
+												Relics Of A Mortal Past 1
+											</h3>
+										</div>
+									</div>
+								</div>
+								<div class="recent__item item-recent swiper-slide">
+									<div class="item-recent__frame">
+										<div class="item-recent__media">
+											<div class="item-recent__media-inner">
+												<img src="img/recent-media2.jpg" alt="" />
+											</div>
+										</div>
+										<div class="item-recent__content">
+											<h3 class="item-recent__title">
+												Relics Of A Mortal Past 1
+											</h3>
+										</div>
+									</div>
+								</div>
+								<div class="recent__item item-recent swiper-slide">
+									<div class="item-recent__frame">
+										<div class="item-recent__media">
+											<div class="item-recent__media-inner">
+												<img src="img/recent-media3.jpg" alt="" />
+											</div>
+										</div>
+										<div class="item-recent__content">
+											<h3 class="item-recent__title">
+												Relics Of A Mortal Past 1
+											</h3>
+										</div>
+									</div>
+								</div>
+								<div class="recent__item item-recent swiper-slide">
+									<div class="item-recent__frame">
+										<div class="item-recent__media">
+											<div class="item-recent__media-inner">
+												<img src="img/recent-media4.jpg" alt="" />
+											</div>
+										</div>
+										<div class="item-recent__content">
+											<h3 class="item-recent__title">
+												Relics Of A Mortal Past 1
+											</h3>
+										</div>
+									</div>
+								</div>
+
+								<div class="recent__item-link  swiper-slide">
+									<a href="#" class="recent__link button-transparent"
+										><span>View All</span></a
+									>
+								</div>
+							</div>
+
+							<div class="swiper-pagination"></div>
+						</div>
+					</div>
+				</section>
+				<section class="contribution">
+					<div class="contribution__container">
+						<div class="contribution__header section__header">
+							<h2 class="section__title">Contribution</h2>
+							<a href="#" class="section__link">View More</a>
+						</div>
+						<div class="contribution__content">
+							<div class="contribution__banner banner-contribution">
+								<div class="banner-contribution__media">
+									<img src="img/contribution-img.jpg" alt="" />
+									<img
+										class="banner-contribution__img-light"
+										src="img/contribution-img-light.jpg"
+										alt=""
+									/>
+								</div>
+								<div class="banner-contribution__content">
+									<h3 class="banner-contribution__title">
+										3D Greek Statue Pack
+									</h3>
+									<div class="banner-contribution__text">
+										<p>Over 200 Greek style sculpture</p>
+									</div>
+									<button class="contribution__btn button">
+										<span>Download</span>
+									</button>
+								</div>
+							</div>
+							<div
+								class="contribution__banner banner-contribution banner-contribution--reverse"
+							>
+								<div class="banner-contribution__media media-banner ">
+									<div class="media-banner__inner">
+										<div
+											class="media-banner__column media-banner__column--1"
+											data-speed="slow"
+										>
+											<ul class="media-banner__list">
+												<li class="media-banner__item">
+													<img
+														src="img/face/Avatar=Avatar4.png"
+														alt=""
+													/>
+												</li>
+												<li class="media-banner__item">
+													<img
+														src="img/face/Avatar=Avatar8.png"
+														alt=""
+													/>
+												</li>
+												<li class="media-banner__item">
+													<img
+														src="img/face/Avatar=Avatar7.png"
+														alt=""
+													/>
+												</li>
+												<li class="media-banner__item">
+													<img
+														src="img/face/Avatar=Avatar6.png"
+														alt=""
+													/>
+												</li>
+											</ul>
+										</div>
+
+										<div
+											class="media-banner__column media-banner__column--2"
+											data-direction="reverse"
+											data-speed="slow"
+										>
+											<ul class="media-banner__list">
+												<li class="media-banner__item">
+													<img
+														src="img/face/Avatar=Avatar5.png"
+														alt=""
+													/>
+												</li>
+												<li class="media-banner__item">
+													<img
+														src="img/face/Avatar=Avatar4.png"
+														alt=""
+													/>
+												</li>
+												<li class="media-banner__item">
+													<img
+														src="img/face/Avatar=Avatar3.png"
+														alt=""
+													/>
+												</li>
+												<li class="media-banner__item">
+													<img
+														src="img/face/Avatar=Avatar2.png"
+														alt=""
+													/>
+												</li>
+											</ul>
+										</div>
+
+										<div
+											class="media-banner__column media-banner__column--3"
+											data-speed="slow"
+										>
+											<ul class="media-banner__list">
+												<li class="media-banner__item">
+													<img
+														src="img/face/Avatar=Avatar12.png"
+														alt=""
+													/>
+												</li>
+												<li class="media-banner__item">
+													<img
+														src="img/face/Avatar=Avatar11.png"
+														alt=""
+													/>
+												</li>
+												<li class="media-banner__item">
+													<img
+														src="img/face/Avatar=Avatar10.png"
+														alt=""
+													/>
+												</li>
+												<li class="media-banner__item">
+													<img src="img/face/image 3.png" alt="" />
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+
+								<div class="banner-contribution__content">
+									<h3 class="banner-contribution__title">
+										Greek Statue Avatars
+									</h3>
+
+									<div class="banner-contribution__text">
+										<p>+500 Greek style User Avatars</p>
+									</div>
+
+									<button class="contribution__btn button">
+										<span>Download</span>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+			<footer class="footer">
+				<div class="footer__container">
+					<h2 class="footer__title">Let’s Connect</h2>
+					<div class="footer__text">
+						<p>Get in touch for opportunities or just to say hi! 👋</p>
+					</div>
+					<div class="footer__social">
+						<ul class="footer__list">
+							<li class="footer__item">
+								<a href="#" class="footer__link"
+									><img src="img/icons/inn.svg" alt=""
+								/></a>
+							</li>
+							<li class="footer__item">
+								<a href="#" class="footer__link"
+									><img src="img/icons/ball.svg" alt=""
+								/></a>
+							</li>
+							<li class="footer__item">
+								<a href="#" class="footer__link"
+									><img src="img/icons/inst.svg" alt=""
+								/></a>
+							</li>
+							<li class="footer__item">
+								<a href="#" class="footer__link"
+									><img src="img/icons/m.svg" alt=""
+								/></a>
+							</li>
+							<li class="footer__item">
+								<a href="#" class="footer__link"
+									><img src="img/icons/mail.svg" alt=""
+								/></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</footer>
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+		<script src="js/script.js"></script>
+	</body>
+</html>
