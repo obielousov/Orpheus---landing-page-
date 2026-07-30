@@ -11,6 +11,7 @@ function windowLoad() {
 	preloader()
 	initThemeSwitcher()
 	initAnimations()
+	initScrollReveal()
 	scrollToSection(".hero__button", "#recent")
 	getHeaderHeight()
 }
@@ -20,6 +21,13 @@ function documentActions(e) {
 
 	if (targetElemnt.closest(".icon-menu")) {
 		html.classList.toggle("menu-open")
+
+		const isOpen = html.classList.contains("menu-open")
+		const icon = document.querySelector(".icon-menu")
+		if (icon) {
+			icon.setAttribute("aria-expanded", isOpen)
+			icon.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu")
+		}
 	}
 }
 
@@ -75,18 +83,27 @@ const swiper = new Swiper(".swiper", {
 function initThemeSwitcher() {
 	const themeSwitch = document.getElementById("theme-switcher")
 
+	const setThemeLabel = () => {
+		const isLight = document.body.classList.contains("lightmode")
+		themeSwitch.setAttribute("aria-label", isLight ? "Switch to dark mode" : "Switch to light mode")
+	}
+
 	const enableLightmode = () => {
 		document.body.classList.add("lightmode")
 		localStorage.setItem("lightmode", "active")
+		setThemeLabel()
 	}
 
 	const disableLightmode = () => {
 		document.body.classList.remove("lightmode")
 		localStorage.removeItem("lightmode")
+		setThemeLabel()
 	}
 
 	if (localStorage.getItem("lightmode") === "active") {
 		enableLightmode()
+	} else {
+		setThemeLabel()
 	}
 
 	themeSwitch.addEventListener("click", () => {
@@ -169,3 +186,35 @@ function initInfinite(scrollers, columns) {
 }
 
 //====================================================================================================
+
+function initScrollReveal() {
+	const reveals = document.querySelectorAll(".reveal")
+
+	if (!reveals.length) return
+
+	// Respect reduced motion: reveal immediately without animation
+	const isReducedMotion = window.matchMedia(
+		"(prefers-reduced-motion: reduce)",
+	).matches
+
+	if (isReducedMotion) {
+		reveals.forEach((el) => el.classList.add("active"))
+		return
+	}
+
+	const observer = new IntersectionObserver(
+		(entries) => {
+			entries.forEach((entry) => {
+				if (entry.isIntersecting) {
+					entry.target.classList.add("active")
+					observer.unobserve(entry.target)
+				}
+			})
+		},
+		{
+			threshold: 0.15,
+		},
+	)
+
+	reveals.forEach((el) => observer.observe(el))
+}

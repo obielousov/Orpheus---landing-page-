@@ -83,7 +83,7 @@
 		<div class="loader" id="preloader">
 			<div class="container">
 				<div class="box">
-					<img src="img/preloader.svg" alt="preloader" />
+					<img src="img/preloader.svg" alt="Loading..." />
 				</div>
 			</div>
 		</div>
@@ -91,12 +91,12 @@
 		<div class="wrapper">
 			<header class="header">
 				<div class="header__container">
-					<a href="#" class="header__logo">
+					<a href="#" class="header__logo" aria-label="Orpheus home">
 						<img src="img/logo.svg" alt="" />
 						<img src="img/logo-light.svg" alt="" />
 					</a>
 					<div class="header__menu menu">
-						<button type="button" class="menu__icon icon-menu">
+						<button type="button" class="menu__icon icon-menu" aria-label="Open menu" aria-expanded="false">
 							<span></span>
 						</button>
 						<nav class="menu__body">
@@ -117,7 +117,7 @@
 								</ul>
 							</div>
 						</nav>
-						<button id="theme-switcher">
+						<button id="theme-switcher" aria-label="Switch theme">
 							<img src="img/icons/Sun.svg" alt="" />
 							<img src="img/icons/moon.svg" alt="" />
 						</button>
@@ -141,17 +141,17 @@
 								</p>
 							</div>
 							<div class="hero__actions">
-								<button class="hero__button button-transparent">
+								<button type="button" class="hero__button button-transparent">
 									<span>Works</span>
 								</button>
-								<button class="hero__button button">
+								<button type="button" class="hero__button button">
 									<span>Free Stuff</span>
 								</button>
 							</div>
 						</div>
 
 						<div class="hero__media">
-							<div class="hero__bg">
+							<div class="hero__bg" role="img" aria-label="Orpheus decorative portrait">
 								<img
 									src="img/hero-media-dark.png"
 									alt=""
@@ -172,17 +172,17 @@
 
 				<section id="recent" class="recent">
 					<div class="recent__container">
-						<div class="recent__header section__header">
+						<div class="recent__header section__header reveal">
 							<h2 class="section__title">Recent</h2>
 							<a href="#" class="section__link">View More</a>
 						</div>
 						<div class="recent__body swiper">
 							<div class="recent__sliders swiper-wrapper ">
-								<div class="recent__item item-recent swiper-slide">
+								<div class="recent__item item-recent swiper-slide reveal reveal--delay-1">
 									<div class="item-recent__frame">
 										<div class="item-recent__media">
 											<div class="item-recent__media-inner">
-												<img src="img/recent-media.jpg" alt="" />
+												<img src="img/recent-media.jpg" alt="Relics Of A Mortal Past 1 - project preview" />
 											</div>
 										</div>
 										<div class="item-recent__content">
@@ -192,11 +192,11 @@
 										</div>
 									</div>
 								</div>
-								<div class="recent__item item-recent swiper-slide">
+								<div class="recent__item item-recent swiper-slide reveal reveal--delay-2">
 									<div class="item-recent__frame">
 										<div class="item-recent__media">
 											<div class="item-recent__media-inner">
-												<img src="img/recent-media2.jpg" alt="" />
+												<img src="img/recent-media2.jpg" alt="Relics Of A Mortal Past 2 - project preview" />
 											</div>
 										</div>
 										<div class="item-recent__content">
@@ -206,11 +206,11 @@
 										</div>
 									</div>
 								</div>
-								<div class="recent__item item-recent swiper-slide">
+								<div class="recent__item item-recent swiper-slide reveal reveal--delay-3">
 									<div class="item-recent__frame">
 										<div class="item-recent__media">
 											<div class="item-recent__media-inner">
-												<img src="img/recent-media3.jpg" alt="" />
+												<img src="img/recent-media3.jpg" alt="Relics Of A Mortal Past 3 - project preview" />
 											</div>
 										</div>
 										<div class="item-recent__content">
@@ -220,11 +220,11 @@
 										</div>
 									</div>
 								</div>
-								<div class="recent__item item-recent swiper-slide">
+								<div class="recent__item item-recent swiper-slide reveal reveal--delay-4">
 									<div class="item-recent__frame">
 										<div class="item-recent__media">
 											<div class="item-recent__media-inner">
-												<img src="img/recent-media4.jpg" alt="" />
+												<img src="img/recent-media4.jpg" alt="Relics Of A Mortal Past 4 - project preview" />
 											</div>
 										</div>
 										<div class="item-recent__content">
@@ -235,7 +235,7 @@
 									</div>
 								</div>
 
-								<div class="recent__item-link  swiper-slide">
+								<div class="recent__item-link  swiper-slide reveal reveal--delay-5">
 									<a href="#" class="recent__link button-transparent"
 										><span>View All</span></a
 									>
@@ -248,34 +248,34 @@
 				</section>
 				<section class="contribution">
 					<div class="contribution__container">
-						<div class="contribution__header section__header">
+						<div class="contribution__header section__header reveal">
 							<h2 class="section__title">Contribution</h2>
 							<a href="#" class="section__link">View More</a>
 						</div>
 						<div class="contribution__content">
-							<div class="contribution__banner banner-contribution">
+							<div class="contribution__banner banner-contribution reveal">
 								<div class="banner-contribution__media">
-									<img src="img/contribution-img.jpg" alt="" />
+									<img src="img/contribution-img.jpg" alt="3D Greek Statue Pack preview" />
 									<img
 										class="banner-contribution__img-light"
 										src="img/contribution-img-light.jpg"
-										alt=""
+										alt="3D Greek Statue Pack preview"
 									/>
 								</div>
 								<div class="banner-contribution__content">
-									<h3 class="banner-contribution__title">
+									<h3 class="banner-contribution__title reveal reveal--delay-1">
 										3D Greek Statue Pack
 									</h3>
-									<div class="banner-contribution__text">
+									<div class="banner-contribution__text reveal reveal--delay-2">
 										<p>Over 200 Greek style sculpture</p>
 									</div>
-									<button class="contribution__btn button">
+									<button type="button" class="contribution__btn button reveal reveal--delay-3">
 										<span>Download</span>
 									</button>
 								</div>
 							</div>
 							<div
-								class="contribution__banner banner-contribution banner-contribution--reverse"
+								class="contribution__banner banner-contribution banner-contribution--reverse reveal"
 							>
 								<div class="banner-contribution__media media-banner ">
 									<div class="media-banner__inner">
@@ -376,15 +376,15 @@
 								</div>
 
 								<div class="banner-contribution__content">
-									<h3 class="banner-contribution__title">
+									<h3 class="banner-contribution__title reveal reveal--delay-1">
 										Greek Statue Avatars
 									</h3>
 
-									<div class="banner-contribution__text">
+									<div class="banner-contribution__text reveal reveal--delay-2">
 										<p>+500 Greek style User Avatars</p>
 									</div>
 
-									<button class="contribution__btn button">
+									<button type="button" class="contribution__btn button reveal reveal--delay-3">
 										<span>Download</span>
 									</button>
 								</div>
@@ -395,34 +395,34 @@
 			</main>
 			<footer class="footer">
 				<div class="footer__container">
-					<h2 class="footer__title">Let’s Connect</h2>
-					<div class="footer__text">
+					<h2 class="footer__title reveal">Let’s Connect</h2>
+					<div class="footer__text reveal reveal--delay-1">
 						<p>Get in touch for opportunities or just to say hi! 👋</p>
 					</div>
-					<div class="footer__social">
+					<div class="footer__social reveal reveal--delay-2">
 						<ul class="footer__list">
 							<li class="footer__item">
-								<a href="#" class="footer__link"
+								<a href="#" class="footer__link" aria-label="LinkedIn"
 									><img src="img/icons/inn.svg" alt=""
 								/></a>
 							</li>
 							<li class="footer__item">
-								<a href="#" class="footer__link"
+								<a href="#" class="footer__link" aria-label="Dribbble"
 									><img src="img/icons/ball.svg" alt=""
 								/></a>
 							</li>
 							<li class="footer__item">
-								<a href="#" class="footer__link"
+								<a href="#" class="footer__link" aria-label="Instagram"
 									><img src="img/icons/inst.svg" alt=""
 								/></a>
 							</li>
 							<li class="footer__item">
-								<a href="#" class="footer__link"
+								<a href="#" class="footer__link" aria-label="Medium"
 									><img src="img/icons/m.svg" alt=""
 								/></a>
 							</li>
 							<li class="footer__item">
-								<a href="#" class="footer__link"
+								<a href="#" class="footer__link" aria-label="Email"
 									><img src="img/icons/mail.svg" alt=""
 								/></a>
 							</li>

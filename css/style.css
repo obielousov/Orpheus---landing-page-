@@ -418,16 +418,18 @@ body {
 .header__logo {
   position: relative;
   z-index: 5;
+  opacity: 0;
   -webkit-transform: translate(35vw, 40vh) scale(4.5);
       -ms-transform: translate(35vw, 40vh) scale(4.5);
           transform: translate(35vw, 40vh) scale(4.5);
-  -webkit-transition: -webkit-transform 1s ease 0.5s;
-  transition: -webkit-transform 1s ease 0.5s;
-  transition: transform 1s ease 0.5s;
-  transition: transform 1s ease 0.5s, -webkit-transform 1s ease 0.5s;
+  -webkit-transition: opacity 0.4s ease 0.3s, -webkit-transform 0.7s ease 0.3s;
+  transition: opacity 0.4s ease 0.3s, -webkit-transform 0.7s ease 0.3s;
+  transition: transform 0.7s ease 0.3s, opacity 0.4s ease 0.3s;
+  transition: transform 0.7s ease 0.3s, opacity 0.4s ease 0.3s, -webkit-transform 0.7s ease 0.3s;
   will-change: transform;
 }
 .loaded .header__logo {
+  opacity: 1;
   -webkit-transform: translate(0, 0) scale(1);
       -ms-transform: translate(0, 0) scale(1);
           transform: translate(0, 0) scale(1);
@@ -672,7 +674,7 @@ body {
   position: relative;
   overflow: hidden;
   padding-top: 9.375rem;
-  margin-bottom: 5rem;
+  margin-bottom: 7.5rem;
 }
 @media (max-width: 47.9375em) {
   .hero {
@@ -772,8 +774,8 @@ body {
   -webkit-text-fill-color: transparent;
   translate: -80% 0;
   opacity: 0;
-  -webkit-transition: 0.5s ease 1s, opacity 0.5s ease 1s;
-  transition: 0.5s ease 1s, opacity 0.5s ease 1s;
+  -webkit-transition: 0.4s ease 0.6s, opacity 0.4s ease 0.6s;
+  transition: 0.4s ease 0.6s, opacity 0.4s ease 0.6s;
 }
 .loaded .hero__title {
   translate: 0 0;
@@ -797,9 +799,9 @@ body {
   text-transform: capitalize;
   line-height: 2.27;
   translate: -80% 0;
-  opacity: 0.5;
-  -webkit-transition: 0.5s ease 1.4s, opacity 0.5s ease 1.4s;
-  transition: 0.5s ease 1.4s, opacity 0.5s ease 1.4s;
+  opacity: 0;
+  -webkit-transition: 0.4s ease 0.9s, opacity 0.4s ease 0.9s;
+  transition: 0.4s ease 0.9s, opacity 0.4s ease 0.9s;
 }
 .loaded .hero__text {
   translate: 0 0;
@@ -828,8 +830,8 @@ body {
   width: 100%;
   translate: -80% 0;
   opacity: 0;
-  -webkit-transition: 0.5s ease 1.8s, opacity 0.5s ease 1.8s;
-  transition: 0.5s ease 1.8s, opacity 0.5s ease 1.8s;
+  -webkit-transition: 0.4s ease 1.2s, opacity 0.4s ease 1.2s;
+  transition: 0.4s ease 1.2s, opacity 0.4s ease 1.2s;
 }
 .loaded .hero__actions {
   translate: 0 0;
@@ -882,8 +884,8 @@ body {
   -webkit-transform-origin: 70% 50%;
       -ms-transform-origin: 70% 50%;
           transform-origin: 70% 50%;
-  -webkit-transition: scale 1s ease 1.5s, opacity 1s ease 1.5s;
-  transition: scale 1s ease 1.5s, opacity 1s ease 1.5s;
+  -webkit-transition: scale 0.7s ease 1s, opacity 0.7s ease 1s;
+  transition: scale 0.7s ease 1s, opacity 0.7s ease 1s;
 }
 .loaded .hero__bg {
   scale: 1;
@@ -1472,4 +1474,42 @@ body {
         -ms-transform: scale(1.1);
             transform: scale(1.1);
   }
+}
+
+/* ============================================================
+   Scroll Reveal Animations
+   ============================================================ */
+.reveal {
+  opacity: 0;
+  translate: 0 2.5rem;
+  -webkit-transition: opacity 0.7s ease, translate 0.7s ease;
+  transition: opacity 0.7s ease, translate 0.7s ease;
+}
+.reveal.active {
+  opacity: 1;
+  translate: 0 0;
+}
+.reveal--delay-1 {
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+}
+.reveal--delay-2 {
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+.reveal--delay-3 {
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+}
+.reveal--delay-4 {
+  -webkit-transition-delay: 0.4s;
+          transition-delay: 0.4s;
+}
+.reveal--delay-5 {
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+.reveal--delay-6 {
+  -webkit-transition-delay: 0.6s;
+          transition-delay: 0.6s;
 }
