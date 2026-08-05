@@ -4,6 +4,44 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+		<title>Orpheus — Product & Graphic Designer</title>
+
+		<meta
+			name="description"
+			content="Orpheus — Product & Graphic Designer crafting end-to-end UX/UI design for software products. Explore recent works and free resources."
+		/>
+		<meta name="author" content="Orpheus" />
+		<meta
+			name="keywords"
+			content="product designer, graphic designer, UX/UI design, portfolio, Orpheus, free resources, 3D statue pack"
+		/>
+		<meta name="theme-color" content="#050607" />
+
+		<!-- Open Graph — Facebook, LinkedIn, Telegram, etc. -->
+		<meta property="og:type" content="website" />
+		<meta property="og:site_name" content="Orpheus" />
+		<meta property="og:title" content="Orpheus — Product & Graphic Designer" />
+		<meta
+			property="og:description"
+			content="Product & Graphic Designer crafting end-to-end UX/UI design for software products. Explore recent works and free resources."
+		/>
+		<meta property="og:image" content="https://obielousov.github.io/Orpheus---landing-page-/img/hero-media-dark.webp" />
+		<meta property="og:url" content="https://obielousov.github.io/Orpheus---landing-page-/" />
+
+		<!-- Twitter / X -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content="Orpheus — Product & Graphic Designer" />
+		<meta
+			name="twitter:description"
+			content="Product & Graphic Designer crafting end-to-end UX/UI design for software products."
+		/>
+		<meta name="twitter:image" content="https://obielousov.github.io/Orpheus---landing-page-/img/hero-media-dark.webp" />
+
+		<link rel="icon" type="image/svg+xml" href="img/logo.svg" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link rel="preconnect" href="https://cdn.jsdelivr.net" />
+
 		<style>
 			html:not(.loaded) body {
 				overflow: hidden;
@@ -69,14 +107,13 @@
 		</style>
 		<link
 			rel="stylesheet"
-			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Cinzel:wght@500&display=swap"
 		/>
 		<link
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
 		/>
 		<link rel="stylesheet" href="css/style.css" />
-		<title>Orpheus</title>
 	</head>
 
 	<body>
@@ -153,19 +190,21 @@
 						<div class="hero__media">
 							<div class="hero__bg" role="img" aria-label="Orpheus decorative portrait">
 								<img
-									src="img/hero-media-dark.png"
+									src="img/hero-media-dark.webp"
 									alt=""
 									class="hero__image hero__image--dark"
+									decoding="async"
 								/>
 
 								<img
-									src="img/hero-media-light.png"
+									src="img/hero-media-light.webp"
 									alt=""
 									class="hero__image hero__image--light"
+									decoding="async"
 								/>
 							</div>
 
-							<!-- <img src="img/hero-decor.png" alt="" class="hero__decor" /> -->
+							<!-- <img src="img/hero-decor.webp" alt="" class="hero__decor" /> -->
 						</div>
 					</div>
 				</section>
@@ -182,7 +221,7 @@
 									<div class="item-recent__frame">
 										<div class="item-recent__media">
 											<div class="item-recent__media-inner">
-												<img src="img/recent-media.jpg" alt="Relics Of A Mortal Past 1 - project preview" />
+												<img loading="lazy" decoding="async" src="img/recent-media.webp" alt="Relics Of A Mortal Past 1 - project preview" />
 											</div>
 										</div>
 										<div class="item-recent__content">
@@ -196,7 +235,7 @@
 									<div class="item-recent__frame">
 										<div class="item-recent__media">
 											<div class="item-recent__media-inner">
-												<img src="img/recent-media2.jpg" alt="Relics Of A Mortal Past 2 - project preview" />
+												<img loading="lazy" decoding="async" src="img/recent-media2.webp" alt="Relics Of A Mortal Past 2 - project preview" />
 											</div>
 										</div>
 										<div class="item-recent__content">
@@ -210,7 +249,7 @@
 									<div class="item-recent__frame">
 										<div class="item-recent__media">
 											<div class="item-recent__media-inner">
-												<img src="img/recent-media3.jpg" alt="Relics Of A Mortal Past 3 - project preview" />
+												<img loading="lazy" decoding="async" src="img/recent-media3.webp" alt="Relics Of A Mortal Past 3 - project preview" />
 											</div>
 										</div>
 										<div class="item-recent__content">
@@ -224,7 +263,7 @@
 									<div class="item-recent__frame">
 										<div class="item-recent__media">
 											<div class="item-recent__media-inner">
-												<img src="img/recent-media4.jpg" alt="Relics Of A Mortal Past 4 - project preview" />
+												<img loading="lazy" decoding="async" src="img/recent-media4.webp" alt="Relics Of A Mortal Past 4 - project preview" />
 											</div>
 										</div>
 										<div class="item-recent__content">
@@ -255,11 +294,13 @@
 						<div class="contribution__content">
 							<div class="contribution__banner banner-contribution reveal">
 								<div class="banner-contribution__media">
-									<img src="img/contribution-img.jpg" alt="3D Greek Statue Pack preview" />
+									<img loading="lazy" decoding="async" src="img/contribution-img.webp" alt="3D Greek Statue Pack preview" />
 									<img
 										class="banner-contribution__img-light"
-										src="img/contribution-img-light.jpg"
+										src="img/contribution-img-light.webp"
 										alt="3D Greek Statue Pack preview"
+										loading="lazy"
+										decoding="async"
 									/>
 								</div>
 								<div class="banner-contribution__content">
@@ -286,26 +327,34 @@
 											<ul class="media-banner__list">
 												<li class="media-banner__item">
 													<img
-														src="img/face/Avatar=Avatar4.png"
+														src="img/face/Avatar=Avatar4.webp"
 														alt=""
+														loading="lazy"
+														decoding="async"
 													/>
 												</li>
 												<li class="media-banner__item">
 													<img
-														src="img/face/Avatar=Avatar8.png"
+														src="img/face/Avatar=Avatar8.webp"
 														alt=""
+														loading="lazy"
+														decoding="async"
 													/>
 												</li>
 												<li class="media-banner__item">
 													<img
-														src="img/face/Avatar=Avatar7.png"
+														src="img/face/Avatar=Avatar7.webp"
 														alt=""
+														loading="lazy"
+														decoding="async"
 													/>
 												</li>
 												<li class="media-banner__item">
 													<img
-														src="img/face/Avatar=Avatar6.png"
+														src="img/face/Avatar=Avatar6.webp"
 														alt=""
+														loading="lazy"
+														decoding="async"
 													/>
 												</li>
 											</ul>
@@ -319,26 +368,34 @@
 											<ul class="media-banner__list">
 												<li class="media-banner__item">
 													<img
-														src="img/face/Avatar=Avatar5.png"
+														src="img/face/Avatar=Avatar5.webp"
 														alt=""
+														loading="lazy"
+														decoding="async"
 													/>
 												</li>
 												<li class="media-banner__item">
 													<img
-														src="img/face/Avatar=Avatar4.png"
+														src="img/face/Avatar=Avatar4.webp"
 														alt=""
+														loading="lazy"
+														decoding="async"
 													/>
 												</li>
 												<li class="media-banner__item">
 													<img
-														src="img/face/Avatar=Avatar3.png"
+														src="img/face/Avatar=Avatar3.webp"
 														alt=""
+														loading="lazy"
+														decoding="async"
 													/>
 												</li>
 												<li class="media-banner__item">
 													<img
-														src="img/face/Avatar=Avatar2.png"
+														src="img/face/Avatar=Avatar2.webp"
 														alt=""
+														loading="lazy"
+														decoding="async"
 													/>
 												</li>
 											</ul>
@@ -351,24 +408,30 @@
 											<ul class="media-banner__list">
 												<li class="media-banner__item">
 													<img
-														src="img/face/Avatar=Avatar12.png"
+														src="img/face/Avatar=Avatar12.webp"
 														alt=""
+														loading="lazy"
+														decoding="async"
 													/>
 												</li>
 												<li class="media-banner__item">
 													<img
-														src="img/face/Avatar=Avatar11.png"
+														src="img/face/Avatar=Avatar11.webp"
 														alt=""
+														loading="lazy"
+														decoding="async"
 													/>
 												</li>
 												<li class="media-banner__item">
 													<img
-														src="img/face/Avatar=Avatar10.png"
+														src="img/face/Avatar=Avatar10.webp"
 														alt=""
+														loading="lazy"
+														decoding="async"
 													/>
 												</li>
 												<li class="media-banner__item">
-													<img src="img/face/image 3.png" alt="" />
+													<img loading="lazy" decoding="async" src="img/face/image 3.webp" alt="" />
 												</li>
 											</ul>
 										</div>

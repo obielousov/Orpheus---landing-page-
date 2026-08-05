@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap");
 *,
 *::before,
 *::after {
@@ -102,7 +101,7 @@ table {
   --bg-color: #fff;
   --white-color: #171717;
   --border-color: #fff;
-  --header-bg-color: (255, 255, 255, 0.25);
+  --header-bg-color: rgba(255, 255, 255, 0.25);
   --btn-color: #fff;
   --section-link-color: rgba(13, 13, 13, 0.8);
   --recent-bg-color: linear-gradient(90deg, rgba(255, 255, 255, 0.81) 19.79%, rgba(255, 255, 255, 0) 97.4%);
@@ -878,7 +877,7 @@ body {
 }
 .hero__bg {
   position: relative;
-  background: url("../img/hero-decor.png") 92% 90%/60% no-repeat;
+  background: url("../img/hero-decor.webp") 92% 90%/60% no-repeat;
   scale: 0;
   opacity: 0;
   -webkit-transform-origin: 70% 50%;
