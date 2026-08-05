@@ -374,6 +374,50 @@ body {
   }
 }
 
+/* ============================================================
+   Scroll Reveal Animations
+   ============================================================ */
+.reveal {
+  opacity: 0;
+  translate: 0 2.5rem;
+  -webkit-transition: opacity 0.7s ease, translate 0.7s ease;
+  transition: opacity 0.7s ease, translate 0.7s ease;
+}
+.reveal.active {
+  opacity: 1;
+  translate: 0 0;
+}
+
+.reveal--delay-1 {
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+}
+
+.reveal--delay-2 {
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.reveal--delay-3 {
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+}
+
+.reveal--delay-4 {
+  -webkit-transition-delay: 0.4s;
+          transition-delay: 0.4s;
+}
+
+.reveal--delay-5 {
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+
+.reveal--delay-6 {
+  -webkit-transition-delay: 0.6s;
+          transition-delay: 0.6s;
+}
+
 .header {
   position: fixed;
   inset-inline-start: 0;
@@ -1473,42 +1517,4 @@ body {
         -ms-transform: scale(1.1);
             transform: scale(1.1);
   }
-}
-
-/* ============================================================
-   Scroll Reveal Animations
-   ============================================================ */
-.reveal {
-  opacity: 0;
-  translate: 0 2.5rem;
-  -webkit-transition: opacity 0.7s ease, translate 0.7s ease;
-  transition: opacity 0.7s ease, translate 0.7s ease;
-}
-.reveal.active {
-  opacity: 1;
-  translate: 0 0;
-}
-.reveal--delay-1 {
-  -webkit-transition-delay: 0.1s;
-          transition-delay: 0.1s;
-}
-.reveal--delay-2 {
-  -webkit-transition-delay: 0.2s;
-          transition-delay: 0.2s;
-}
-.reveal--delay-3 {
-  -webkit-transition-delay: 0.3s;
-          transition-delay: 0.3s;
-}
-.reveal--delay-4 {
-  -webkit-transition-delay: 0.4s;
-          transition-delay: 0.4s;
-}
-.reveal--delay-5 {
-  -webkit-transition-delay: 0.5s;
-          transition-delay: 0.5s;
-}
-.reveal--delay-6 {
-  -webkit-transition-delay: 0.6s;
-          transition-delay: 0.6s;
 }
