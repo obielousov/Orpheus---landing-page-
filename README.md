@@ -10,7 +10,7 @@ A fully responsive portfolio website for a Product & Graphic Designer featuring 
 - **Animated page transitions** — preloader and scroll reveal effects powered by IntersectionObserver
 - **Portfolio slider** — responsive Swiper carousel showcasing recent projects
 - **Infinite marquee** — continuously scrolling avatar showcase
-- **Responsive navigation** — sticky header with a mobile burger menu
+- **Responsive navigation** — fixed header with a mobile burger menu
 - **Accessibility** — semantic HTML, ARIA attributes, prefers-reduced-motion, and descriptive image alternatives
 - **SEO & Social** — Open Graph and Twitter Card metadata
 
@@ -30,8 +30,7 @@ A fully responsive portfolio website for a Product & Graphic Designer featuring 
 ├── scss/               # SCSS source files
 ├── css/                # compiled CSS
 ├── js/                 # site interactions
-├── img/                # images & SVG assets
-└── fonts/              # local fonts
+└── img/                # images & SVG assets
 ```
 
 ## Run Locally
