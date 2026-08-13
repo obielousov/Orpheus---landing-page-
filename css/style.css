@@ -806,14 +806,6 @@ body {
     gap: 2.3125rem;
   }
 }
-/* One-shot hero entrance animation — keeps the staggered load-in but does not
-   delay color/background transitions when switching themes */
-@keyframes hero-slide {
-  to {
-    translate: 0 0;
-    opacity: 1;
-  }
-}
 .hero__title {
   font-family: "Cinzel";
   font-size: clamp(1.875rem, -0.2724rem + 4.4796vw, 4rem); /* 64/30>1526-767 */
@@ -827,7 +819,8 @@ body {
   opacity: 0;
 }
 .loaded .hero__title {
-  animation: hero-slide 0.4s ease 0.6s both;
+  -webkit-animation: hero-slide 0.4s ease 0.6s both;
+          animation: hero-slide 0.4s ease 0.6s both;
 }
 @media (min-width: 62em) {
   .hero__title {
@@ -850,7 +843,8 @@ body {
   opacity: 0;
 }
 .loaded .hero__text {
-  animation: hero-slide 0.4s ease 0.9s both;
+  -webkit-animation: hero-slide 0.4s ease 0.9s both;
+          animation: hero-slide 0.4s ease 0.9s both;
 }
 @media (min-width: 62em) {
   .hero__text {
@@ -877,7 +871,8 @@ body {
   opacity: 0;
 }
 .loaded .hero__actions {
-  animation: hero-slide 0.4s ease 1.2s both;
+  -webkit-animation: hero-slide 0.4s ease 1.2s both;
+          animation: hero-slide 0.4s ease 1.2s both;
 }
 @media (min-width: 30.625em) {
   .hero__actions {
@@ -920,7 +915,7 @@ body {
 }
 .hero__bg {
   position: relative;
-  background: url("../img/hero-decor.webp") 92% 90%/60% no-repeat;
+  background: url("../img/hero-decor.webp") 105% 90%/60% no-repeat;
   scale: 0;
   opacity: 0;
   -webkit-transform-origin: 70% 50%;
@@ -963,7 +958,6 @@ body {
 }
 .hero .hero__image--light {
   display: none;
-  mix-blend-mode: multiply;
 }
 .lightmode .hero .hero__image--light {
   display: block;
@@ -984,6 +978,19 @@ body {
   aspect-ratio: 487/490;
 }
 
+@-webkit-keyframes hero-slide {
+  to {
+    translate: 0 0;
+    opacity: 1;
+  }
+}
+
+@keyframes hero-slide {
+  to {
+    translate: 0 0;
+    opacity: 1;
+  }
+}
 .recent {
   position: relative;
   z-index: 3;

@@ -219,7 +219,7 @@
 	&__bg {
 		position: relative;
 
-		background: url("../img/hero-decor.webp") 92% 90% / 60% no-repeat;
+		background: url("../img/hero-decor.webp") 105% 90% / 60% no-repeat;
 
 		// animation
 		scale: 0;
@@ -278,8 +278,6 @@
 		// .hero__image--light
 		&--light {
 			display: none;
-
-			mix-blend-mode: multiply;
 
 			.lightmode & {
 				display: block;
